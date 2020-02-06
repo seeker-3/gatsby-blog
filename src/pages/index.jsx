@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import netlifyIdentity from 'netlify-identity-widget'
 
 export default () => {
-	if (window.netlifyIdentity) {
-		window.netlifyIdentity.on('init', user => {
+	if (typeof window !== undefined) {
+		netlifyIdentity.on('init', user => {
 			if (!user) {
-				window.netlifyIdentity.on('login', () => {
+				netlifyIdentity.on('login', () => {
 					document.location.href = '/admin/'
 				})
 			}
