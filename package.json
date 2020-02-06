@@ -33,6 +33,6 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "cp -r public .netlify/build"
+    "git": "git add . && git commit -m commits && git push"
   }
 }
