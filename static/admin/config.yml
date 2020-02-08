@@ -28,7 +28,7 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
   - name: slider-images
     label: Slider Images
-    filder: uploads/media
+    folder: uploads/media
     fields:
       - label: Slider Images
         name: slider-images
