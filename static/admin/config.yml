@@ -12,6 +12,17 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: post
+    label: posts
+    folder: src/pages/menu
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Type", name: "type", widget: "hidden", default: "menu-item" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
