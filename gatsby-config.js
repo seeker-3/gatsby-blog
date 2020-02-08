@@ -5,10 +5,13 @@ module.exports = {
     author: ``,
   },
   plugins: [
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
-    // `gatsby-plugin-catch-links`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-netlify-cms`,
+      options: {
+        modulePath: `${__dirname}/src/cms/index.js`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,17 +19,21 @@ module.exports = {
         name: 'pages',
       },
     },
+    `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-plugin-netlify-cms`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        modulePath: `${__dirname}/src/cms/index.js`,
+        path: `${__dirname}/uploads/media`,
+        name: 'images',
       },
     },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
   ],
 }
-
+// `gatsby-plugin-catch-links`,
 // `gatsby-plugin-react-helmet`,
-// `gatsby-plugin-sharp`,
+// ,
 // {
 // 	resolve: `gatsby-plugin-manifest`,
 // 	options: {
