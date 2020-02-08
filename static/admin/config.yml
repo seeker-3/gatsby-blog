@@ -34,6 +34,6 @@ collections:
         name: type
         widget: hidden
         default: slider-image
-      - label: Slider Image
+      - label: Title
         name: title
         widget: image
