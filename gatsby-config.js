@@ -15,7 +15,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/content`,
+        path: `${__dirname}/content`,
         name: 'pages',
       },
     },
@@ -24,6 +24,7 @@ module.exports = {
     `gatsby-transformer-remark`,
   ],
 }
+
 // `gatsby-plugin-catch-links`,
 // `gatsby-plugin-react-helmet`,
 // ,

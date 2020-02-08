@@ -18,7 +18,7 @@ collections:
   #     - { label: "Body", name: "body", widget: "markdown" }
   - name: menu-item
     label: Menu Item
-    folder: static/conent/menu-items
+    folder: content/menu-items
     create: true
     fields:
       - { label: Type, name: type, widget: hidden, default: menu-item }
@@ -27,7 +27,7 @@ collections:
       - { label: Description, name: description, widget: text }
   - name: slider-images
     label: Slider Images
-    folder: static/content/slider-images
+    folder: content/slider-images
     create: true
     fields:
       - label: Type
@@ -37,6 +37,3 @@ collections:
       - label: Slider Image
         name: title
         widget: image
-        media_library:
-          config:
-            multiple: true

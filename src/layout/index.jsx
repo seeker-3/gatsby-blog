@@ -6,6 +6,7 @@ export default ({ children }) => (
     <div>
       <Link to="/">home</Link> <Link to="/menu">menu</Link>{' '}
       <Link to="/posts">posts</Link>
+      <Link to="/admin">admin</Link>
     </div>
     {children}
   </main>
