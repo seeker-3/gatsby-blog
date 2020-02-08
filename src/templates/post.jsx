@@ -1,21 +1,23 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-export default ({
-  data: {
-    markdownRemark: {
-      frontmatter: { title },
-      html: __html,
-    },
-  },
-}) => {
-  return (
-    <>
-      <Link to="/posts">back</Link>
-      <p>{title}</p>
-      <div dangerouslySetInnerHTML={{ __html }} />
-    </>
-  )
+export default ({ data }) => {
+  if (data) {
+    const {
+      markdownRemark: {
+        frontmatter: { title },
+        html: __html,
+      },
+    } = data
+    return (
+      <>
+        <Link to="/posts">back</Link>
+        <p>{title}</p>
+        <div dangerouslySetInnerHTML={{ __html }} />
+      </>
+    )
+  }
+  return null
 }
 
 export const postQuery = graphql`
