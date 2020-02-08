@@ -6,9 +6,10 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: posts
-    label: Posts
+  - name: post
+    label: posts
     folder: src/pages/posts
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }

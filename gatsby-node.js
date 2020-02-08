@@ -30,18 +30,12 @@ exports.createPages = ({ actions: { createPage }, graphql }) => {
         return Promise.reject(errors)
       }
 
-      posts.forEach(
-        ({
-          node: {
-            frontmatter: { path },
-          },
-        }) => {
-          createPage({
-            path,
-            component,
-          })
-        }
-      )
+      posts.forEach(({ node: { slug: path } }) => {
+        createPage({
+          path,
+          component,
+        })
+      })
     }
   )
 }
