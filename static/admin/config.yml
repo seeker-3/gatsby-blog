@@ -28,6 +28,7 @@ collections:
   - name: slider-images
     label: Slider Images
     folder: content/slider-images
+    slug: "{{month}}-{{day}}-{{minute}}-{{slug}}"
     create: true
     fields:
       - label: Type
@@ -36,4 +37,8 @@ collections:
         default: slider-image
       - label: Title
         name: title
+        widget: hidden
+        default: slider-image
+      - label: Thumbnail
+        name: thumbnail
         widget: image
