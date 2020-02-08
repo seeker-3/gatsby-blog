@@ -7,6 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify`,
+    // `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,

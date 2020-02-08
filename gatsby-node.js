@@ -11,31 +11,29 @@ exports.createPages = ({ actions: { createPage }, graphql }) => {
             html
             id
             frontmatter {
-              path
               title
+              date
             }
           }
         }
       }
     }
-  `).then(
-    ({
-      errors,
-      data: {
-        allMarkdownRemark: { edges: posts },
-      },
-    }) => {
-      if (errors) {
-        errors.forEach(e => console.error(e.toString()))
-        return Promise.reject(errors)
-      }
-
-      posts.forEach(({ node: { slug: path } }) => {
-        createPage({
-          path,
-          component,
-        })
-      })
+  `).then(({ errors, data }) => {
+    if (errors) {
+      errors.forEach(e => console.error(e.toString()))
+      return Promise.reject(errors)
     }
-  )
+
+    const posts = data.allMarkdownRemark.edges
+
+    posts.forEach(({ node: { id } }) => {
+      createPage({
+        path: `/posts/${id}`,
+        component,
+        context: {
+          id,
+        },
+      })
+    })
+  })
 }
