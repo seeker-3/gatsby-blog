@@ -23,10 +23,9 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            description
-            price
             title
-            type
+            price
+            description
           }
         }
       }
