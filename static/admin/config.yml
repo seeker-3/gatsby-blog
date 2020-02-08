@@ -2,20 +2,20 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: uploads/media
-public_folder: uploads/public
+media_folder: static/uploads
+public_folder: /uploads
 
 collections:
-  - name: post
-    label: Posts
-    folder: src/pages/posts
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "Type", name: "type", widget: "hidden", default: "post" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown" }
+  # - name: post
+  #   label: Posts
+  #   folder: src/pages/posts
+  #   create: true
+  #   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+  #   fields:
+  #     - { label: "Type", name: "type", widget: "hidden", default: "post" }
+  #     - { label: "Title", name: "title", widget: "string" }
+  #     - { label: "Publish Date", name: "date", widget: "datetime" }
+  #     - { label: "Body", name: "body", widget: "markdown" }
   - name: menu-item
     label: Menu Item
     folder: src/pages/menu
