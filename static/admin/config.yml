@@ -30,6 +30,10 @@ collections:
     folder: test
     create: true
     fields:
+      - label: Title
+        name: title
+        widget: hidden
+        default: slider-image
       - label: Slider Images
         name: slider-images
         widget: image
