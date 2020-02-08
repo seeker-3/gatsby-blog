@@ -1,7 +1,7 @@
 ---
 type: menu-item
-title: hot chicken
+title: taco
 price: '15'
-description: very hot
+description: mexican sandwich
 ---
 
