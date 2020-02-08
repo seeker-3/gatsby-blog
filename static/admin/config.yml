@@ -20,7 +20,6 @@ collections:
     label: Menu Item
     folder: src/pages/menu
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Type", name: "type", widget: "hidden", default: "menu-item" }
       - { label: "Title", name: "title", widget: "string" }
@@ -29,6 +28,7 @@ collections:
   - name: slider-images
     label: Slider Images
     folder: uploads/media
+    create: true
     fields:
       - label: Slider Images
         name: slider-images
