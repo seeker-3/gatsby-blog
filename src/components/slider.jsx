@@ -1,57 +1,32 @@
 import React from 'react'
-import { useStaticQuery, StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
-
-const render = data => {
-  console.log('hi', data)
-
-  return (
-    <>
-      <p>slider!</p>
-      {data.allImageSharp.edges.map(({ node: { id, fixed } }) => (
-        <>
-          <img src={fixed.src} alt="" />
-        </>
-      ))}
-    </>
-  )
-}
+import { useStaticQuery, graphql } from 'gatsby'
+// import Img from 'gatsby-image'
 
 export default () => {
-  const data = useStaticQuery(graphql`
+  const {
+    allMarkdownRemark: { edges: images },
+  } = useStaticQuery(graphql`
     query imagesIndexQuery {
-      allImageSharp {
+      allMarkdownRemark(
+        filter: { frontmatter: { type: { eq: "slider-image" } } }
+      ) {
         edges {
           node {
             id
-            fixed {
-              src
+            frontmatter {
+              title
             }
           }
         }
       }
     }
   `)
-  return render(data)
+  return (
+    <>
+      <p>slider!</p>
+      {images.map(({ node: { id, frontmatter: { title } } }) => (
+        <img key={id} src={title} alt="" />
+      ))}
+    </>
+  )
 }
-
-// export default () => {
-//   return (
-//     <StaticQuery>
-//       query=
-//       {graphql`
-//         query imagesIndexQuery {
-//           allImageSharp {
-//             edges {
-//               node {
-//                 id
-//                 fixed
-//               }
-//             }
-//           }
-//         }
-//       `}
-//       render={render}
-//     </StaticQuery>
-//   )
-// }
