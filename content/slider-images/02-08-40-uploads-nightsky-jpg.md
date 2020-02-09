@@ -1,6 +1,5 @@
 ---
 type: slider-image
-title: car
-thumbnail: /uploads/car.jpg
+image: /uploads/car.jpg
 ---
 

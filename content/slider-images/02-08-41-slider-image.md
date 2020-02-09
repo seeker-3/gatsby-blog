@@ -1,6 +1,4 @@
 ---
 type: slider-image
-title: night sky
-thumbnail: /uploads/nightsky.jpg
+image: /uploads/nightsky.jpg
 ---
-
