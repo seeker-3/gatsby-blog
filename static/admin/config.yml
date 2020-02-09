@@ -33,7 +33,7 @@ collections:
     fields:
       - name: title
         label: Title
-        widget: string
+        widget: hidden
       - name: description
         label: description
         widget: text
