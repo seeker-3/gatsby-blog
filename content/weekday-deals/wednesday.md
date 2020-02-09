@@ -1,5 +1,6 @@
 ---
-title: wednesday
-description: ""
-background: ""
+title: Wednesday
+description: ...Wednesday!!!
+background: /uploads/nightsky.jpg
 ---
+
