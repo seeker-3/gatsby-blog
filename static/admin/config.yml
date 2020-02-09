@@ -37,7 +37,7 @@ collections:
         default: slider-image
       - label: Title
         name: title
-        widget: hidden
+        widget: string
         default: slider-image
       - label: Thumbnail
         name: thumbnail
