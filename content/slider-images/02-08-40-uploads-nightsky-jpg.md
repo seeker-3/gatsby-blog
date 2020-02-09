@@ -1,6 +1,6 @@
 ---
 type: slider-image
-title: /uploads/nightsky.jpg
+title: car
 thumbnail: /uploads/car.jpg
 ---
 
