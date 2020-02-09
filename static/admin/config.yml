@@ -2,12 +2,17 @@ backend:
   name: git-gateway
   branch: master
 
+# backend:
+#   name: github
+#   repo: seekr3/gatsby-netlify
+
 media_folder: static/uploads
 public_folder: /uploads
 
 collections:
   - name: posts
     label: Posts
+    create: true
     folder: content/posts
     fields:
       - { name: type, widget: hidden, default: post }
@@ -21,41 +26,25 @@ collections:
         name: test
         label: Test
         fields:
-          - name: bool
-            widget: boolean
-          - name: code
-            widget: code
-          - name: date
-            widget: date
-          - name: datetime
-            widget: datetime
-          - name: file
-            widget: file
-          - name: image
-            widget: image
+          - { name: bool, widget: boolean }
+          - { name: code, widget: code }
+          - { name: date, widget: date }
+          - { name: datetime, widget: datetime }
+          - { name: file, widget: file }
+          - { name: image, widget: image }
+          - { name: string, widget: string }
+          - { name: text, widget: text }
+          - { name: map, widget: map }
+          - { name: markdown, widget: markdown }
+          - { name: number, widget: number }
+          - { name: object, widget: object }
+          - { name: relation, widget: relation, collection: menu-items }
           - name: "gallery"
             widget: "list"
-            field:
-              name: image
-              widget: image
-          - name: map
-            widget: map
-          - name: markdown
-            widget: markdown
-          - name: number
-            widget: number
-          - name: object
-            widget: object
-          - name: relation
-            widget: relation
-            collection: menu-items
+            field: { name: image, widget: image }
           - name: select
             widget: select
             options:
               - { label: "Chicago", value: "ORD" }
               - { label: "Paris", value: "CDG" }
               - { label: "Tokyo", value: "HND" }
-          - name: string
-            widget: string
-          - name: text
-            widget: text
