@@ -18,17 +18,17 @@ collections:
   - name: slider-images
     label: Slider Images
     files:
-      file: content/slider-images/images.md
-      name: slider-images
-      label: Slider Images
-      fields:
-        - name: type
-          widget: hidden
-          default: slider-image
-        - label: Images
-          name: images
-          widget: list
-          field: { label: Image, name: image, widget: image }
+      - file: content/slider-images/images.md
+        name: slider-images
+        label: Slider Images
+        fields:
+          - name: type
+            widget: hidden
+            default: slider-image
+          - label: Images
+            name: images
+            widget: list
+            field: { label: Image, name: image, widget: image }
   - name: weekday-deals
     label: Weekday Deals
     folder: content/weekday-deals
