@@ -17,16 +17,18 @@ collections:
       - { label: Description, name: description, widget: text }
   - name: slider-images
     label: Slider Images
-    folder: content/slider-images
-    create: true
-    identifier_field: image
-    fields:
-      - name: type
-        widget: hidden
-        default: slider-image
-      - label: Image
-        name: image
-        widget: image
+    files:
+      file: content/slider-images/images.md
+      name: slider-images
+      label: Slider Images
+      fields:
+        - name: type
+          widget: hidden
+          default: slider-image
+        - label: Images
+          name: images
+          widget: list
+          field: { label: Image, name: image, widget: image }
   - name: weekday-deals
     label: Weekday Deals
     folder: content/weekday-deals
@@ -74,8 +76,13 @@ collections:
             widget: object
           - name: relation
             widget: relation
+            collection: menu-items
           - name: select
             widget: select
+            options:
+              - { label: "Chicago", value: "ORD" }
+              - { label: "Paris", value: "CDG" }
+              - { label: "Tokyo", value: "HND" }
           - name: string
             widget: string
           - name: text
