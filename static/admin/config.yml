@@ -6,42 +6,14 @@ media_folder: static/uploads
 public_folder: /uploads
 
 collections:
-  - name: menu-item
-    label: Menu Item
-    folder: content/menu-items
-    create: true
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Type, name: type, widget: hidden, default: menu-item }
-      - { label: Price, name: price, widget: number }
-      - { label: Description, name: description, widget: text }
-  - name: slider-images
-    label: Slider Images
-    files:
-      - file: content/slider-images/images.md
-        name: slider-images
-        label: Slider Images
-        fields:
-          - name: type
-            widget: hidden
-            default: slider-image
-          - label: Images
-            name: images
-            widget: list
-            field: { label: Image, name: image, widget: image }
-  - name: weekday-deals
-    label: Weekday Deals
-    folder: content/weekday-deals
-    fields:
-      - name: title
-        label: Title
-        widget: string
-      - name: description
-        label: description
-        widget: text
-      - name: background
-        label: Background
-        widget: image
+  - name: posts
+    label: Posts
+    folder: content/posts
+      fields:
+        - {name: type, widget: hidden, default: post}
+        - {name: title, label: Title, widget: string}
+        - {name: date, label: Date, widget: datetime}
+        - {name: body, label: Body, widget: markdown}
   - name: test
     label: Test
     files:

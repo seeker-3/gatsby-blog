@@ -1,6 +1,0 @@
----
-type: menu-item
-title: taco
-price: 10
-description: so goods
----
