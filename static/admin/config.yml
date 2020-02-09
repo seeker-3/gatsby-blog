@@ -33,10 +33,32 @@ collections:
     fields:
       - name: title
         label: Title
-        widget: hidden
+        widget: string
       - name: description
         label: description
         widget: text
       - name: background
         label: Background
         widget: image
+  - name: test
+    label: test
+    files:
+      - file: content/test/test.md
+        name: test
+        label: Test
+        fields:
+          - name: bool
+            # label: Bool
+            widget: boolean
+          - name: code
+            # label: Code
+            widget: code
+          - name: date
+            label: Date
+            widget: date
+          - name: datetime
+            label: DateTime
+            widget: datetime
+          - name: file
+            label: file
+            widget: file
