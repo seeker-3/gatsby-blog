@@ -1,6 +1,6 @@
 ---
 type: slider-image
-title: slider-image
+title: floweres
 thumbnail: /uploads/flowers.jpg
 ---
 
