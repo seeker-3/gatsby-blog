@@ -28,12 +28,10 @@ collections:
   - name: slider-images
     label: Slider Images
     folder: content/slider-images
-    slug: "{{month}}-{{day}}-{{minute}}-{{slug}}"
     create: true
     identifier_field: image
     fields:
-      - label: Type
-        name: type
+      - name: type
         widget: hidden
         default: slider-image
       - label: Image
