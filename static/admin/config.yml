@@ -41,24 +41,40 @@ collections:
         label: Background
         widget: image
   - name: test
-    label: test
     files:
       - file: content/test/test.md
         name: test
-        label: Test
         fields:
           - name: bool
-            # label: Bool
             widget: boolean
           - name: code
-            # label: Code
             widget: code
           - name: date
-            label: Date
             widget: date
           - name: datetime
-            label: DateTime
             widget: datetime
           - name: file
-            label: file
             widget: file
+          - name: image
+            widget: image
+          - name: "gallery"
+            widget: "list"
+            field:
+              name: image
+              widget: image
+          - name: map
+            widget: map
+          - name: markdown
+            widget: markdown
+          - name: number
+            widget: number
+          - name: object
+            widget: object
+          - name: relation
+            widget: relation
+          - name: select
+            widget: select
+          - name: string
+            widget: string
+          - name: text
+            widget: text
