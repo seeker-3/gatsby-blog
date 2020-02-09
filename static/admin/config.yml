@@ -26,6 +26,7 @@ collections:
         name: test
         label: Test
         fields:
+          - { name: type, widget: hidden, default: test }
           - { name: bool, widget: boolean }
           - { name: code, widget: code }
           - { name: date, widget: date }
