@@ -41,9 +41,11 @@ collections:
         label: Background
         widget: image
   - name: test
+    label: Test
     files:
       - file: content/test/test.md
         name: test
+        label: Test
         fields:
           - name: bool
             widget: boolean
