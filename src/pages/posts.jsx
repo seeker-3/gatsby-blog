@@ -10,9 +10,11 @@ export default ({
     <>
       <p>posts!</p>
       {posts.map(({ node: { id, frontmatter: { title, date } } }) => (
-        <Link key={id} to={`posts/${id}`}>
-          {title} {date}
-        </Link>
+        <div>
+          <Link key={id} to={`posts/${id}`}>
+            {title} {date}
+          </Link>
+        </div>
       ))}
     </>
   )
