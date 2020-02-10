@@ -7,16 +7,15 @@ export default ({
   },
 }) => {
   return (
-    <>
-      <p>posts!</p>
+    <div>
       {posts.map(({ node: { id, frontmatter: { title, date } } }) => (
         <div>
           <Link key={id} to={`posts/${id}`}>
-            {title} {date}
+            {title}
           </Link>
         </div>
       ))}
-    </>
+    </div>
   )
 }
 

@@ -25,7 +25,6 @@ export const postQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
-        date
       }
       html
     }
