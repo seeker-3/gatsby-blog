@@ -27,6 +27,6 @@
     "dev": "gatsby clean && gatsby develop",
     "clean": "gatsby clean",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "commit": "git add . && git commit -m commits && git push"
+    "commit": "git pull && git add . && git commit -m commits && git push"
   }
 }
