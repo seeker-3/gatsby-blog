@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 export default ({
   data: {
@@ -9,9 +10,9 @@ export default ({
     <>
       <p>posts!</p>
       {posts.map(({ node: { id, frontmatter: { title, date } } }) => (
-        <p key={id}>
+        <Link key={id} to={`posts/${id}`}>
           {title} {date}
-        </p>
+        </Link>
       ))}
     </>
   )
